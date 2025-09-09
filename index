@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aides et rappels pour les exercices « Réviser ses gammes » p. 11</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #6b8cae;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --border-color: #ddd;
+            --hover-color: #e6f0ff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: var(--primary-color);
+            margin-top: 1.5em;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 2em;
+            padding: 10px;
+            background-color: var(--hover-color);
+            border-radius: 5px;
+        }
+
+        details {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--secondary-color);
+            padding: 5px;
+            font-size: 1.1em;
+        }
+
+        summary:hover {
+            color: var(--primary-color);
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid var(--primary-color);
+            overflow-x: auto;
+        }
+
+        .toc {
+            background-color: var(--hover-color);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+        }
+
+        .toc ul {
+            padding-left: 20px;
+        }
+
+        .toc li {
+            margin: 5px 0;
+        }
+
+        .toc a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aides et rappels « Réviser ses gammes » p. 11</h1>
+
+        
+        <div class="toc">
+            <h3>Table des matières</h3>
+            <ul>
+                <li><a href="#exercice1">Exercice 1 – Calcul de termes</a></li>
+                <li><a href="#exercice2">Exercice 2 – Suites particulières</a></li>
+                <li><a href="#exercice3">Exercice 3 – Suite auxiliaire</a></li>
+                <li><a href="#exercice4">Exercice 4 – Variations d’une suite</a></li>
+                <li><a href="#exercice5">Exercice 5 – Variations et fonctions</a></li>
+                <li><a href="#exercice6">Exercice 6 – Variations et suites</a></li>
+                <li><a href="#exercice7">Exercice 7 – Suite définie par un algorithme</a></li>
+                <li><a href="#exercice8">Exercice 8 – Multiples</a></li>
+            </ul>
+        </div>
+
+        <section id="exercice1">
+            <h2>Exercice 1 – Calcul de termes</h2>
+            <h3>Rappel de cours : Suites explicites et récursives</h3>
+            <p>
+                Une <strong>suite explicite</strong> donne chaque terme directement en fonction de son indice \( n \), par exemple \( u_n = f(n) \).
+                Une <strong>suite récursive</strong> définit le premier terme \( u_0 \) et chaque terme suivant \( u_{n+1} \) à partir du terme précédent \( u_n \),
+                par une relation comme \( u_{n+1} = g(u_n) \). Pour calculer, substituez les valeurs de \( n \) ou itérez à partir de \( u_0 \).
+            </p>
+
+            <h4>1) Calcul à la main de \( u_0, u_1, v_1, v_2 \)</h4>
+            <details>
+                <summary>Indice 1 : Application directe</summary>
+                <p>Pour \( u_n = 5 + \sqrt{n} \), remplacez \( n \) par 0 puis 1. Pour \( v_n \), commencez par \( v_0 = 16 \) et utilisez \( v_{n+1} = 5 + \sqrt{v_n} \) une fois pour \( v_1 \), puis encore pour \( v_2 \).</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Simplification</summary>
+                <p>Calculez les racines carrées (\( \sqrt{0} \), \( \sqrt{1} \), \( \sqrt{16} \), \( \sqrt{9} \)) avant d'ajouter 5.</p>
+            </details>
+
+            <h4>2) Dix premiers termes de chaque suite</h4>
+            <details>
+                <summary>Indice 1 : Méthode explicite</summary>
+                <p>Pour \( u_n \), calculez \( 5 + \sqrt{n} \) pour \( n = 0 \) à 9 en utilisant une calculatrice si besoin.</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Méthode récursive</summary>
+                <p>Pour \( v_n \), partez de \( v_0 = 16 \) et appliquez \( v_{n+1} = 5 + \sqrt{v_n} \) neuf fois de suite.</p>
+            </details>
+
+            <h4>3) Algorithme en langage naturel pour calculer \( v_n \)</h4>
+            <details>
+                <summary>Indice 1 : Structure générale</summary>
+                <p>Un algorithme doit avoir une entrée (\( n \)), une initialisation (\( v = 16 \)), une boucle pour répéter l'opération, et une sortie (\( v \)).</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Boucle</summary>
+                <p>Utilisez une boucle qui répète \( v \leftarrow 5 + \sqrt{v} \) \( n \) fois.</p>
+            </details>
+        </section>
+
+        <!-- Ajoute les autres sections (Exercice 2 à 8) en suivant le même modèle -->
+        <!-- Exemple pour Exercice 2 -->
+        <section id="exercice2">
+            <h2>Exercice 2 – Suites particulières</h2>
+            <h3>Rappel de cours : Suites arithmétiques et géométriques</h3>
+            <p>
+                Une <strong>suite arithmétique</strong> a une récurrence \( u_{n+1} = u_n + r \), avec formule explicite \( u_n = u_0 + n r \),
+                et sa variation dépend du signe de \( r \). Une <strong>suite géométrique</strong> a une récurrence \( v_{n+1} = q v_n \),
+                avec formule explicite \( v_n = v_0 q^n \) (ou \( v_n = v_1 q^{n-1} \) si indexée à 1), et sa variation dépend de \( |q| \) et le signe de \( v_0 \).
+            </p>
+
+            <h4>1) Suite arithmétique \( (u_n) \)</h4>
+            <h5>a) Relation de récurrence et formule explicite</h5>
+            <details>
+                <summary>Indice 1 : Formule de récurrence</summary>
+                <p>La récurrence est basée sur l'addition de la raison \( r \) au terme précédent.</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Formule explicite</summary>
+                <p>Utilisez \( u_n = u_0 + n r \) avec \( u_0 = 48 \) et \( r = -5 \).</p>
+            </details>
+
+            <h5>b) Calcul de \( u_5 \)</h5>
+            <details>
+                <summary>Indice 1 : Substitution</summary>
+                <p>Remplacez \( n = 5 \) dans la formule explicite.</p>
+            </details>
+
+            <h5>c) Sens de variation</h5>
+            <details>
+                <summary>Indice 1 : Règle</summary>
+                <p>Vérifiez le signe de \( r \) : positif pour croissante, négatif pour décroissante.</p>
+            </details>
+
+            <h4>2) Suite géométrique \( (v_n) \)</h4>
+            <h5>a) Relation de récurrence et formule explicite</h5>
+            <details>
+                <summary>Indice 1 : Formule de récurrence</summary>
+                <p>Multipliez le terme précédent par la raison \( q \).</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Formule explicite</summary>
+                <p>Utilisez \( v_n = v_1 q^{n-1} \) avec \( v_1 = -2 \) et \( q = 3 \).</p>
+            </details>
+
+            <h5>b) Calcul de \( v_5 \) (optionnel)</h5>
+            <details>
+                <summary>Indice 1 : Puissance</summary>
+                <p>Calculez \( q^{n-1} \) pour \( n = 5 \), puis multipliez par \( v_1 \).</p>
+            </details>
+
+            <h5>c) Sens de variation</h5>
+            <details>
+                <summary>Indice 1 : Règle</summary>
+                <p>Si \( |q| > 1 \) et \( v_1 < 0 \), la suite est décroissante.</p>
+            </details>
+        </section>
+
+        <!-- Ajoute les autres sections (Exercice 3 à 8) ici -->
+    </div>
+</body>
+</html>
