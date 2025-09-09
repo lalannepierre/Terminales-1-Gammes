@@ -116,9 +116,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Aides et rappels « Réviser ses gammes » p. 11</h1>
+        <h1>Aides et rappels pour les exercices « Réviser ses gammes » p. 11</h1>
 
-        
+        <p>
+            Ce document offre des aides progressives et des rappels de cours pour aider les élèves à résoudre les exercices sans donner les réponses complètes.
+            Chaque exercice est accompagné de rappels théoriques et d'indices pratiques sous forme de sections pliables.
+            Cliquez sur le <strong>summary</strong> pour révéler le contenu.
+        </p>
+
         <div class="toc">
             <h3>Table des matières</h3>
             <ul>
@@ -133,6 +138,7 @@
             </ul>
         </div>
 
+        <!-- Exercice 1 -->
         <section id="exercice1">
             <h2>Exercice 1 – Calcul de termes</h2>
             <h3>Rappel de cours : Suites explicites et récursives</h3>
@@ -173,8 +179,7 @@
             </details>
         </section>
 
-        <!-- Ajoute les autres sections (Exercice 2 à 8) en suivant le même modèle -->
-        <!-- Exemple pour Exercice 2 -->
+        <!-- Exercice 2 -->
         <section id="exercice2">
             <h2>Exercice 2 – Suites particulières</h2>
             <h3>Rappel de cours : Suites arithmétiques et géométriques</h3>
@@ -231,7 +236,201 @@
             </details>
         </section>
 
-        <!-- Ajoute les autres sections (Exercice 3 à 8) ici -->
+        <!-- Exercice 3 -->
+        <section id="exercice3">
+            <h2>Exercice 3 – Suite auxiliaire</h2>
+            <h3>Rappel de cours : Suites et transformations</h3>
+            <p>
+                Une suite peut être transformée (ex. \( v_n = u_n - k \)) pour simplifier sa récurrence.
+                Une suite est géométrique si le rapport \( u_{n+1}/u_n \) est constant, arithmétique si la différence \( u_{n+1} - u_n \) l'est.
+            </p>
+
+            <h4>1) Calcul des premiers termes et nature de la suite</h4>
+            <details>
+                <summary>Indice 1 : Calcul</summary>
+                <p>Appliquez la récurrence \( u_{n+1} = -2 u_n + 3 \) à partir de \( u_0 = 6 \).</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Vérification</summary>
+                <p>Comparez les différences \( u_{n+1} - u_n \) et les rapports \( u_{n+1}/u_n \) pour tester arithmétique ou géométrique.</p>
+            </details>
+
+            <h4>2) Définition de la suite \( (v_n) \) et démonstration de sa nature</h4>
+            <details>
+                <summary>Indice 1 : Transformation</summary>
+                <p>Essayez \( v_n = u_n - 1 \) et substituez dans la récurrence.</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Preuve</summary>
+                <p>Vérifiez si \( v_{n+1} = q v_n \) avec une constante \( q \).</p>
+            </details>
+
+            <h4>3) Formules explicites</h4>
+            <details>
+                <summary>Indice 1 : Géométrique</summary>
+                <p>Pour \( v_n \), utilisez \( v_n = v_0 q^n \) avec \( v_0 \) et \( q \) trouvés.</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Relier \( u_n \) et \( v_n \)</summary>
+                <p>Exprimez \( u_n \) à partir de \( v_n = u_n - 1 \).</p>
+            </details>
+        </section>
+
+        <!-- Exercice 4 -->
+        <section id="exercice4">
+            <h2>Exercice 4 – Variations d’une suite</h2>
+            <h3>Rappel de cours : Variations d’une suite</h3>
+            <p>
+                La variation est étudiée via \( u_{n+1} - u_n \). Si \( u_{n+1} - u_n > 0 \), la suite est croissante ; si < 0, décroissante.
+                Développez et analysez le signe de la différence.
+            </p>
+
+            <h4>1) Calcul de la différence \( u_{n+1} - u_n \)</h4>
+            <details>
+                <summary>Indice 1 : Développement</summary>
+                <p>Remplacez \( n \) par \( n+1 \) dans \( u_n = 2n^2 - 3n \) et soustrayez \( u_n \).</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Simplification</summary>
+                <p>Regroupez les termes pour obtenir une expression en \( n \).</p>
+            </details>
+
+            <h4>2) Étude du signe de \( u_{n+1} - u_n \)</h4>
+            <details>
+                <summary>Indice 1 : Évaluation</summary>
+                <p>Testez le signe pour \( n \geq 1 \) en remplaçant par une valeur minimale (ex. \( n = 1 \)).</p>
+            </details>
+        </section>
+
+        <!-- Exercice 5 -->
+        <section id="exercice5">
+            <h2>Exercice 5 – Variations et fonctions</h2>
+            <h3>Rappel de cours : Dérivées et variations</h3>
+            <p>
+                La dérivée \( f'(x) \) indique la variation : \( f'(x) > 0 \) pour croissante, \( f'(x) < 0 \) pour décroissante.
+                Calculez \( f'(x) \) et analysez son signe sur l’intervalle donné.
+            </p>
+
+            <h4>1) La fonction \( h(x) = 0,2x^2 + x - 3 \) sur \( I = [0, +\infty[ \)</h4>
+            <details>
+                <summary>Indice 1 : Dérivée</summary>
+                <p>Dérivez terme à terme et évaluez le signe pour \( x \geq 0 \).</p>
+            </details>
+
+            <h4>2) La fonction \( f(x) = \frac{3}{x + 1} \) sur \( I = ]-1, +\infty[ \)</h4>
+            <details>
+                <summary>Indice 1 : Dérivée</summary>
+                <p>Utilisez la règle du quotient et vérifiez le signe du dénominateur.</p>
+            </details>
+
+            <h4>3) La fonction \( k(x) = \frac{-x}{x + 1} \) sur \( I = ]-1, +\infty[ \)</h4>
+            <details>
+                <summary>Indice 1 : Dérivée</summary>
+                <p>Appliquez la règle du quotient et simplifiez.</p>
+            </details>
+
+            <h4>4) La fonction \( \ell(x) = (x + 3)\sqrt{x} \) sur \( I = ]0, +\infty[ \)</h4>
+            <details>
+                <summary>Indice 1 : Dérivée</summary>
+                <p>Utilisez la règle du produit et simplifiez l’expression.</p>
+            </details>
+        </section>
+
+        <!-- Exercice 6 -->
+        <section id="exercice6">
+            <h2>Exercice 6 – Variations et suites</h2>
+            <h3>Rappel de cours : Méthodes de variation</h3>
+            <p>
+                Comparez \( u_{n+1} - u_n \) ou le rapport \( u_{n+1}/u_n \) (si termes positifs) pour déterminer la variation.
+                Une différence positive indique une suite croissante, négative une décroissante.
+            </p>
+
+            <h4>1) \( u_n = 0,2 n^2 + n - 3 \)</h4>
+            <details>
+                <summary>Indice 1 : Différence</summary>
+                <p>Calculez \( u_{n+1} - u_n \) et évaluez son signe.</p>
+            </details>
+
+            <h4>2) \( u_n = \frac{3}{n + 1} \)</h4>
+            <details>
+                <summary>Indice 1 : Différence</summary>
+                <p>Trouvez \( u_{n+1} - u_n \) en mettant au même dénominateur.</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Rapport</summary>
+                <p>Si les termes sont positifs, comparez \( u_{n+1}/u_n \) à 1.</p>
+            </details>
+
+            <h4>3) \( u_n = \frac{n}{n + 1} \)</h4>
+            <details>
+                <summary>Indice 1 : Différence</summary>
+                <p>Calculez \( u_{n+1} - u_n \) avec un dénominateur commun.</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Rapport</summary>
+                <p>Vérifiez si \( u_{n+1}/u_n > 1 \) avec les termes positifs.</p>
+            </details>
+
+            <h4>4) \( u_0 = 0 \) et \( u_{n+1} = u_n - 2n - 5 \)</h4>
+            <details>
+                <summary>Indice 1 : Différence</summary>
+                <p>Exprimez \( u_{n+1} - u_n \) directement.</p>
+            </details>
+
+            <h4>5) \( u_0 = -5 \) et \( u_{n+1} = u_n + n^2 \)</h4>
+            <details>
+                <summary>Indice 1 : Différence</summary>
+                <p>Calculez \( u_{n+1} - u_n \) et analysez son signe pour \( n \geq 0 \).</p>
+            </details>
+        </section>
+
+        <!-- Exercice 7 -->
+        <section id="exercice7">
+            <h2>Exercice 7 – Suite définie par un algorithme</h2>
+            <h3>Rappel de cours : Suites par algorithme</h3>
+            <p>
+                Une suite définie par un algorithme suit une règle itérative (ex. boucle for).
+                Lisez l’algorithme pour identifier la récurrence (ex. \( u_{n+1} = f(u_n) \)).
+            </p>
+
+            <h4>1) Les quatre premiers termes</h4>
+            <details>
+                <summary>Indice 1 : Itération</summary>
+                <p>Commencez avec \( u = 0 \) et appliquez la boucle pour \( n = 1 \) à 4.</p>
+            </details>
+
+            <h4>2) Relation de récurrence</h4>
+            <details>
+                <summary>Indice 1 : Traduction</summary>
+                <p>Identifiez la relation à partir de la mise à jour dans la boucle (\( u = 5u - 1 \)).</p>
+            </details>
+        </section>
+
+        <!-- Exercice 8 -->
+        <section id="exercice8">
+            <h2>Exercice 8 – Multiples</h2>
+            <h3>Rappel de cours : Multiples</h3>
+            <p>
+                Un nombre est multiple de 3 s’il est de la forme \( 3k \) avec \( k \) entier.
+                Pour prouver, factorisez ou utilisez des propriétés modulo 3.
+            </p>
+
+            <h4>1) Quatre multiples de 3</h4>
+            <details>
+                <summary>Indice 1 : Exemples</summary>
+                <p>Pensez à des nombres divisibles par 3 (ex. 0, 3, 6, 9).</p>
+            </details>
+
+            <h4>2) Montrer que \( (3n + 1)^2 - 7 \) est toujours multiple de 3</h4>
+            <details>
+                <summary>Indice 1 : Développement</summary>
+                <p>Développez \( (3n + 1)^2 \) et soustrayez 7, puis cherchez un facteur 3.</p>
+            </details>
+            <details>
+                <summary>Indice 2 : Factorisation</summary>
+                <p>Vérifiez si le résultat est de la forme \( 3 \times k \) avec \( k \) entier.</p>
+            </details>
+        </section>
     </div>
 </body>
 </html>
