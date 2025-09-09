@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aides et rappels pour les exercices « Réviser ses gammes » p. 11</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2, h3 { color: #333; }
+        details { margin-bottom: 10px; }
+        summary { cursor: pointer; font-weight: bold; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<h1>Aides et rappels pour les exercices « Réviser ses gammes » p. 11</h1>
+
+<p>Ce document offre des aides progressives et des rappels de cours pour aider les élèves à résoudre les exercices sans donner les réponses complètes. Chaque exercice est accompagné de rappels théoriques et d'indices pratiques sous forme de sections pliables. Cliquez sur le summary pour révéler le contenu. Utilisez les rappels pour comprendre les concepts, puis appliquez-les avec les indices si nécessaire.</p>
+
+<h2>Exercice 1 – Calcul de termes</h2>
+
+<h3>Rappel de cours : Suites explicites et récursives</h3>
+<p>Une **suite explicite** donne chaque terme directement en fonction de son indice \( n \), par exemple \( u_n = f(n) \). Une **suite récursive** définit le premier terme \( u_0 \) et chaque terme suivant \( u_{n+1} \) à partir du terme précédent \( u_n \), par une relation comme \( u_{n+1} = g(u_n) \). Pour calculer, substituez les valeurs de \( n \) ou itérez à partir de \( u_0 \).</p>
+
+<h4>1) Calcul à la main de \( u_0, u_1, v_1, v_2 \)</h4>
+<details>
+<summary>Indice 1 : Application directe</summary>
+Pour \( u_n = 5 + \sqrt{n} \), remplacez \( n \) par 0 puis 1. Pour \( v_n \), commencez par \( v_0 = 16 \) et utilisez \( v_{n+1} = 5 + \sqrt{v_n} \) une fois pour \( v_1 \), puis encore pour \( v_2 \).
+</details>
+<details>
+<summary>Indice 2 : Simplification</summary>
+Calculez les racines carrées (\( \sqrt{0} \), \( \sqrt{1} \), \( \sqrt{16} \), \( \sqrt{9} \)) avant d'ajouter 5.
+</details>
+
+<h4>2) Dix premiers termes de chaque suite</h4>
+<details>
+<summary>Indice 1 : Méthode explicite</summary>
+Pour \( u_n \), calculez \( 5 + \sqrt{n} \) pour \( n = 0 \) à 9 en utilisant une calculatrice si besoin.
+</details>
+<details>
+<summary>Indice 2 : Méthode récursive</summary>
+Pour \( v_n \), partez de \( v_0 = 16 \) et appliquez \( v_{n+1} = 5 + \sqrt{v_n} \) neuf fois de suite.
+</details>
+
+<h4>3) Algorithme en langage naturel pour calculer \( v_n \)</h4>
+<details>
+<summary>Indice 1 : Structure générale</summary>
+Un algorithme doit avoir une entrée (\( n \)), une initialisation (\( v = 16 \)), une boucle pour répéter l'opération, et une sortie (\( v \)).
+</details>
+<details>
+<summary>Indice 2 : Boucle</summary>
+Utilisez une boucle qui répète \( v \leftarrow 5 + \sqrt{v} \) \( n \) fois.
+</details>
+
+<h2>Exercice 2 – Suites particulières</h2>
+
+<h3>Rappel de cours : Suites arithmétiques et géométriques</h3>
+<p>Une **suite arithmétique** a une récurrence \( u_{n+1} = u_n + r \), avec formule explicite \( u_n = u_0 + n r \), et sa variation dépend du signe de \( r \). Une **suite géométrique** a une récurrence \( v_{n+1} = q v_n \), avec formule explicite \( v_n = v_0 q^n \) (ou \( v_n = v_1 q^{n-1} \) si indexée à 1), et sa variation dépend de \( |q| \) et le signe de \( v_0 \).</p>
+
+<h4>1) Suite arithmétique \( (u_n) \)</h4>
+<h5>a) Relation de récurrence et formule explicite</h5>
+<details>
+<summary>Indice 1 : Formule de récurrence</summary>
+La récurrence est basée sur l'addition de la raison \( r \) au terme précédent.
+</details>
+<details>
+<summary>Indice 2 : Formule explicite</summary>
+Utilisez \( u_n = u_0 + n r \) avec \( u_0 = 48 \) et \( r = -5 \).
+</details>
+<h5>b) Calcul de \( u_5 \)</h5>
+<details>
+<summary>Indice 1 : Substitution</summary>
+Remplacez \( n = 5 \) dans la formule explicite.
+</details>
+<h5>c) Sens de variation</h5>
+<details>
+<summary>Indice 1 : Règle</summary>
+Vérifiez le signe de \( r \) : positif pour croissante, négatif pour décroissante.
+</details>
+
+<h4>2) Suite géométrique \( (v_n) \)</h4>
+<h5>a) Relation de récurrence et formule explicite</h5>
+<details>
+<summary>Indice 1 : Formule de récurrence</summary>
+Multipliez le terme précédent par la raison \( q \).
+</details>
+<details>
+<summary>Indice 2 : Formule explicite</summary>
+Utilisez \( v_n = v_1 q^{n-1} \) avec \( v_1 = -2 \) et \( q = 3 \).
+</details>
+<h5>b) Calcul de \( v_5 \) (optionnel)</h5>
+<details>
+<summary>Indice 1 : Puissance</summary>
+Calculez \( q^{n-1} \) pour \( n = 5 \), puis multipliez par \( v_1 \).
+</details>
+<h5>c) Sens de variation</h5>
+<details>
+<summary>Indice 1 : Règle</summary>
+Si \( |q| > 1 \) et \( v_1 < 0 \), la suite est décroissante.
+</details>
+
+<h2>Exercice 3 p. 11 - Suite auxiliaire</h2>
+
+<h3>Rappel de cours : Suites et transformations</h3>
+<p>Une suite peut être transformée (ex. \( v_n = u_n - k \)) pour simplifier sa récurrence. Une suite est géométrique si le rapport \( u_{n+1}/u_n \) est constant, arithmétique si la différence \( u_{n+1} - u_n \) l'est.</p>
+
+<h4>1) Calcul des premiers termes et nature de la suite</h4>
+<details>
+<summary>Indice 1 : Calcul</summary>
+Appliquez la récurrence \( u_{n+1} = -2 u_n + 3 \) à partir de \( u_0 = 6 \).
+</details>
+<details>
+<summary>Indice 2 : Vérification</summary>
+Comparez les différences \( u_{n+1} - u_n \) et les rapports \( u_{n+1}/u_n \) pour tester arithmétique ou géométrique.
+</details>
+
+<h4>2) Définition de la suite \( (v_n) \) et démonstration de sa nature</h4>
+<details>
+<summary>Indice 1 : Transformation</summary>
+Essayez \( v_n = u_n - 1 \) et substituez dans la récurrence.
+</details>
+<details>
+<summary>Indice 2 : Preuve</summary>
+Vérifiez si \( v_{n+1} = q v_n \) avec une constante \( q \).
+</details>
+
+<h4>3) Formules explicites</h4>
+<details>
+<summary>Indice 1 : Géométrique</summary>
+Pour \( v_n \), utilisez \( v_n = v_0 q^n \) avec \( v_0 \) et \( q \) trouvés.
+</details>
+<details>
+<summary>Indice 2 : Relier \( u_n \) et \( v_n \)</summary>
+Exprimez \( u_n \) à partir de \( v_n = u_n - 1 \).
+</details>
+
+<h2>Exercice 4 p. 11 - Variations d’une suite</h2>
+
+<h3>Rappel de cours : Variations d’une suite</h3>
+<p>La variation est étudiée via \( u_{n+1} - u_n \). Si \( u_{n+1} - u_n > 0 \), la suite est croissante ; si < 0, décroissante. Développez et analysez le signe de la différence.</p>
+
+<h4>1) Calcul de la différence \( u_{n+1} - u_n \)</h4>
+<details>
+<summary>Indice 1 : Développement</summary>
+Remplacez \( n \) par \( n+1 \) dans \( u_n = 2n^2 - 3n \) et soustrayez \( u_n \).
+</details>
+<details>
+<summary>Indice 2 : Simplification</summary>
+Regroupez les termes pour obtenir une expression en \( n \).
+</details>
+
+<h4>2) Étude du signe de \( u_{n+1} - u_n \)</h4>
+<details>
+<summary>Indice 1 : Évaluation</summary>
+Testez le signe pour \( n \geq 1 \) en remplaçant par une valeur minimale (ex. \( n = 1 \)).
+</details>
+
+<h2>Exercice 5 p. 11 – Variations et fonctions</h2>
+
+<h3>Rappel de cours : Dérivées et variations</h3>
+<p>La dérivée \( f'(x) \) indique la variation : \( f'(x) > 0 \) pour croissante, \( f'(x) < 0 \) pour décroissante. Calculez \( f'(x) \) et analysez son signe sur l’intervalle donné.</p>
+
+<h4>1) La fonction \( h(x) = 0,2x^2 + x - 3 \) sur \( I = [0, +\infty[ \)</h4>
+<details>
+<summary>Indice 1 : Dérivée</summary>
+Dérivez terme à terme et évaluez le signe pour \( x \geq 0 \).
+</details>
+
+<h4>2) La fonction \( f(x) = \frac{3}{x + 1} \) sur \( I = ]-1, +\infty[ \)</h4>
+<details>
+<summary>Indice 1 : Dérivée</summary>
+Utilisez la règle du quotient et vérifiez le signe du dénominateur.
+</details>
+
+<h4>3) La fonction \( k(x) = \frac{-x}{x + 1} \) sur \( I = ]-1, +\infty[ \)</h4>
+<details>
+<summary>Indice 1 : Dérivée</summary>
+Appliquez la règle du quotient et simplifiez.
+</details>
+
+<h4>4) La fonction \( \ell(x) = (x + 3)\sqrt{x} \) sur \( I = ]0, +\infty[ \)</h4>
+<details>
+<summary>Indice 1 : Dérivée</summary>
+Utilisez la règle du produit et simplifiez l’expression.
+</details>
+
+<h2>Exercice 6 p. 11 – Variations et suites</h2>
+
+<h3>Rappel de cours : Méthodes de variation</h3>
+<p>Comparez \( u_{n+1} - u_n \) ou le rapport \( u_{n+1}/u_n \) (si termes positifs) pour déterminer la variation. Une différence positive indique une suite croissante, négative une décroissante.</p>
+
+<h4>1) \( u_n = 0,2 n^2 + n - 3 \)</h4>
+<details>
+<summary>Indice 1 : Différence</summary>
+Calculez \( u_{n+1} - u_n \) et évaluez son signe.
+</details>
+
+<h4>2) \( u_n = \frac{3}{n + 1} \)</h4>
+<details>
+<summary>Indice 1 : Différence</summary>
+Trouvez \( u_{n+1} - u_n \) en mettant au même dénominateur.
+</details>
+<details>
+<summary>Indice 2 : Rapport</summary>
+Si les termes sont positifs, comparez \( u_{n+1}/u_n \) à 1.
+</details>
+
+<h4>3) \( u_n = \frac{n}{n + 1} \)</h4>
+<details>
+<summary>Indice 1 : Différence</summary>
+Calculez \( u_{n+1} - u_n \) avec un dénominateur commun.
+</details>
+<details>
+<summary>Indice 2 : Rapport</summary>
+Vérifiez si \( u_{n+1}/u_n > 1 \) avec les termes positifs.
+</details>
+
+<h4>4) \( u_0 = 0 \) et \( u_{n+1} = u_n - 2n - 5 \)</h4>
+<details>
+<summary>Indice 1 : Différence</summary>
+Exprimez \( u_{n+1} - u_n \) directement.
+</details>
+
+<h4>5) \( u_0 = -5 \) et \( u_{n+1} = u_n + n^2 \)</h4>
+<details>
+<summary>Indice 1 : Différence</summary>
+Calculez \( u_{n+1} - u_n \) et analysez son signe pour \( n \geq 0 \).
+</details>
+
+<h2>Exercice 7 p. 11 – Suite définie par un algorithme</h2>
+
+<h3>Rappel de cours : Suites par algorithme</h3>
+<p>Une suite définie par un algorithme suit une règle itérative (ex. boucle for). Lisez l’algorithme pour identifier la récurrence (ex. \( u_{n+1} = f(u_n) \)).</p>
+
+<h4>1) Les quatre premiers termes</h4>
+<details>
+<summary>Indice 1 : Itération</summary>
+Commencez avec \( u = 0 \) et appliquez la boucle pour \( n = 1 \) à 4.
+</details>
+
+<h4>2) Relation de récurrence</h4>
+<details>
+<summary>Indice 1 : Traduction</summary>
+Identifiez la relation à partir de la mise à jour dans la boucle (\( u = 5u - 1 \)).
+</details>
+
+<h2>Exercice 8 p 11 – Multiples</h2>
+
+<h3>Rappel de cours : Multiples</h3>
+<p>Un nombre est multiple de 3 s’il est de la forme \( 3k \) avec \( k \) entier. Pour prouver, factorisez ou utilisez des propriétés modulo 3.</p>
+
+<h4>1) Quatre multiples de 3</h4>
+<details>
+<summary>Indice 1 : Exemples</summary>
+Pensez à des nombres divisibles par 3 (ex. 0, 3, 6, 9).
+</details>
+
+<h4>2) Montrer que \( (3n + 1)^2 - 7 \) est toujours multiple de 3</h4>
+<details>
+<summary>Indice 1 : Développement</summary>
+Développez \( (3n + 1)^2 \) et soustrayez 7, puis cherchez un facteur 3.
+</details>
+<details>
+<summary>Indice 2 : Factorisation</summary>
+Vérifiez si le résultat est de la forme \( 3 \times k \) avec \( k \) entier.
+</details>
+
+</body>
+</html>
